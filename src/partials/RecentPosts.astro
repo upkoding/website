@@ -1,0 +1,43 @@
+---
+export const prerender = true;
+export const partial = true;
+
+import { BlogGallery } from '@/boilerplate-components';
+const latestPosts = await fetch(
+  'https://substackapi.com/api/feeds/blog.upkoding.com?limit=6&sort=new'
+)
+  .then((res) => res.json())
+  .catch(() => []);
+
+const posts = latestPosts.map((post: any) => {
+  return {
+    title: post.title,
+    description: post.description,
+    pubDate: post.post_date,
+    imgSrc: post.cover_image,
+    imgAlt: post.title,
+    canonical_url: post.canonical_url + "?utm_source=upkoding.com&utm_medium=recent-posts",
+    draft: false,
+  };
+});
+---
+
+<div class="mx-auto max-w-screen-lg px-3 py-6">
+    <div class="mb-6 text-2xl font-bold">
+      <div class="flex items-baseline justify-between">
+        <div>
+          Recent <span class="text-green-400">Posts</span>
+        </div>
+  
+        <div class="text-sm">
+          <a
+            href="https://blog.upkoding.com/"
+            class="text-green-400 hover:underline"
+          >
+            View all Posts →
+          </a>
+        </div>
+      </div>
+    </div>
+    <BlogGallery postList={posts} />
+</div>

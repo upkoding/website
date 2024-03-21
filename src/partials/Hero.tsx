@@ -3,27 +3,30 @@ import {
   HeroAvatar,
   HeroSocial,
   Section,
-} from 'astro-boilerplate-components';
+} from '@/boilerplate-components';
 
 const Hero = () => (
   <Section>
     <HeroAvatar
       title={
         <>
-          Hi there, I'm <GradientText>Ixartz</GradientText> 👋
+          Halo! saya <GradientText>Eka</GradientText> 👋
         </>
       }
       description={
         <>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            malesuada
-          </a>{' '}
-          nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet,{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            consectetur
-          </a>{' '}
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          Software Engineer asal Bali yang mungkin lebih dikenal lewat channel
+          Youtube{' '}
+          <a
+            className="text-green-400 hover:underline"
+            href="https://www.youtube.com/@upkoding"
+            target="_blank"
+          >
+            UpKoding
+          </a>
+          . Situs ini adalah sebuah ruang kecil di pojokan Internet tempat saya
+          mendokumantasikan proyek, produk atau apapun yang saya kerjakan dan
+          hasilkan sebagai seorang developer.
         </>
       }
       avatar={
@@ -36,25 +39,19 @@ const Hero = () => (
       }
       socialButtons={
         <>
-          <a href="/">
+          <a href="https://twitter.com/ekaputra07" target="_blank">
             <HeroSocial
               src="/assets/images/twitter-icon.png"
               alt="Twitter icon"
             />
           </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/facebook-icon.png"
-              alt="Facebook icon"
-            />
-          </a>
-          <a href="/">
+          <a href="https://linkedin.com/in/ekaputra07" target="_blank">
             <HeroSocial
               src="/assets/images/linkedin-icon.png"
               alt="Linkedin icon"
             />
           </a>
-          <a href="/">
+          <a href="https://www.youtube.com/@upkoding" target="_blank">
             <HeroSocial
               src="/assets/images/youtube-icon.png"
               alt="Youtube icon"
