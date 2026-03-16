@@ -6,7 +6,7 @@ type IRecentPostsProps = {
 };
 
 const BlogGallery = (props: IRecentPostsProps) => (
-  <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+  <div className="flex flex-col divide-y divide-ink-border">
     {props.postList.map((post) => (
       <BlogCard key={post.canonical_url} instance={post} />
     ))}
