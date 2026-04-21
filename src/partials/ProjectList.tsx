@@ -82,14 +82,14 @@ const ProjectList = () => (
           <div className="shrink-0">
             {project.img ? (
               <img
-                className="h-20 w-20 rounded-2xl object-cover transition-transform duration-300 group-hover:scale-105"
+                className="size-20 rounded-2xl object-cover transition-transform duration-300 group-hover:scale-105"
                 src={project.img.src}
                 alt={project.img.alt}
                 loading="lazy"
               />
             ) : (
               <div
-                className={`flex h-20 w-20 items-center justify-center rounded-2xl border border-ink-border transition-transform duration-300 group-hover:scale-105 ${project.icon.bg} ${project.icon.color}`}
+                className={`flex size-20 items-center justify-center rounded-2xl border border-ink-border transition-transform duration-300 group-hover:scale-105 ${project.icon.bg} ${project.icon.color}`}
               >
                 {project.icon.node}
               </div>

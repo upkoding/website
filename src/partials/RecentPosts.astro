@@ -1,8 +1,8 @@
 ---
+import { BlogGallery } from '@/boilerplate-components';
+
 export const prerender = true;
 export const partial = true;
-
-import { BlogGallery } from '@/boilerplate-components';
 
 const latestPosts = await fetch(
   'https://substackapi.com/api/feeds/blog.upkoding.com?limit=6&sort=new'
@@ -17,25 +17,23 @@ const posts = latestPosts.map((post: any) => {
     pubDate: post.post_date,
     imgSrc: post.cover_image,
     imgAlt: post.title,
-    canonical_url:
-      post.canonical_url +
-      '?utm_source=upkoding.com&utm_medium=recent-posts',
+    canonical_url: `${post.canonical_url}?utm_source=upkoding.com&utm_medium=recent-posts`,
     draft: false,
   };
 });
 ---
 
-<section class="mx-auto max-w-screen-lg px-6 py-12">
-  <div class="mb-8 flex items-center justify-between">
-    <div class="flex items-center gap-4">
-      <h2 class="font-display text-2xl font-bold text-sand-100">
-        Recent <span class="text-flame">Posts</span>
+<section class='mx-auto max-w-screen-lg px-6 py-12'>
+  <div class='mb-8 flex items-center justify-between'>
+    <div class='flex items-center gap-4'>
+      <h2 class='font-display text-2xl font-bold text-sand-100'>
+        Recent <span class='text-flame'>Posts</span>
       </h2>
-      <div class="h-px w-12 bg-ink-border" />
+      <div class='h-px w-12 bg-ink-border'></div>
     </div>
     <a
-      href="https://blog.upkoding.com/"
-      class="text-sm text-sand-300 transition-colors duration-200 hover:text-flame"
+      href='https://blog.upkoding.com/'
+      class='text-sm text-sand-300 transition-colors duration-200 hover:text-flame'
     >
       Lihat semua →
     </a>

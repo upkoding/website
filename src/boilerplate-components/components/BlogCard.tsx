@@ -1,4 +1,5 @@
 import { ArrowRight } from '@/components/ArrowRight';
+
 import type { IFrontmatter } from '../types/IFrontMatter';
 
 type IBlogCardProps = {

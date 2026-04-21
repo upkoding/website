@@ -73,7 +73,10 @@ const Hero = () => (
         </p>
 
         <div className="mt-8 flex items-center gap-2.5">
-          <SocialLink href="https://linkedin.com/in/ekaputra07" label="LinkedIn">
+          <SocialLink
+            href="https://linkedin.com/in/ekaputra07"
+            label="LinkedIn"
+          >
             <LinkedInIcon />
           </SocialLink>
           <SocialLink href="https://www.youtube.com/@upkoding" label="YouTube">
