@@ -8,6 +8,8 @@ const tagColors: Record<string, string> = {
   ios: 'bg-lime-100 text-lime-700 border-lime-200',
   android: 'bg-green-100 text-green-700 border-green-200',
   free: 'bg-emerald-100 text-emerald-700 border-emerald-200',
+  freemium: 'bg-teal-100 text-teal-700 border-teal-200',
+  gym: 'bg-orange-100 text-orange-700 border-orange-200',
   'e-book': 'bg-amber-100 text-amber-700 border-amber-200',
   'audio-book': 'bg-rose-100 text-rose-700 border-rose-200',
 };
@@ -45,10 +47,18 @@ type Project = ProjectBase &
 
 const projects: Project[] = [
   {
+    name: 'GymLuv - Gym check-in',
+    description:
+      'Minimalist iPhone gym tracker. Log workouts with a single tap, track consistency with a heatmap and streak counter. No account, no subscription — works fully offline.',
+    link: 'https://www.gymluv.app/?ref=upkoding',
+    img: { src: '/assets/images/gymluv.png', alt: 'GymLuv' },
+    tags: ['mobile', 'ios', 'gym', 'freemium'],
+  },
+  {
     name: 'RAI — Kalender Bali',
     description:
       'Kalender Saka Bali modern dengan asisten AI. Lengkap dengan Ala-Ayuning Dewasa, pengingat Otonan & Piodalan, dan fitur "Tanya RAI" untuk menjawab pertanyaan seputar budaya Bali. Gratis, tanpa iklan.',
-    link: 'https://rai.upkoding.com/',
+    link: 'https://rai.upkoding.com/?ref=upkoding',
     img: { src: '/assets/images/rai.png', alt: 'RAI Kalender Bali' },
     tags: ['mobile', 'ai', 'ios', 'android', 'free'],
   },
@@ -56,7 +66,7 @@ const projects: Project[] = [
     name: 'E-book Zero To Programmer',
     description:
       'Rangkuman perjalanan dari nol mengarungi dunia IT — dari tidak tahu apa-apa sampai bisa membangun produk sendiri. Tersedia dalam format e-book dan audio-book, gratis untuk semua.',
-    link: 'https://upkoding.gitbook.io/zero-to-programmer',
+    link: 'https://upkoding.gitbook.io/zero-to-programmer?ref=upkoding',
     icon: { node: <BookIcon />, bg: 'bg-amber-50', color: 'text-amber-600' },
     tags: ['free', 'e-book', 'audio-book'],
   },
